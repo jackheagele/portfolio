@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Heagele Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/76e743c4fd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <!--<img src = "images/logo.png" class = "logo">-->
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <i class="fa-solid fa-bars"></i>
+        </nav>
+        <div class="header-text">
+            <p>Computer Science Student</p>
+            <h1><span>Jack Heagele</span></h1>
+        </div>
+    </div>
+</div>   
+<!-------------about------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/headshot.JPG">
+            </div>
+            <div class="about-col-2">
+                <h1 class = "sub-title">About Me</h1>
+                <p>I am a second-year Computer Science student at Penn State University. I am interested in software, application, and web development. I am currently seeking Internships to continue my passion for the fast-paced world of computing! Click through the tabs below to read more!</p>
+
+                <div class="tab-titles">
+                    <p class = "tab-links active-link" onclick = "opentab('skills')">Skills</p>
+                    <p class = "tab-links" onclick = "opentab('experience')">Experience</p>
+                    <p class = "tab-links" onclick = "opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id = "skills">
+                    <ul>
+                        <li><span>Python</span><br>Python is the programming language I have the most programming experience with. My most practice with data structures has been done in Python. I have used libraries such as PyGame to create small games with friends in high school.</li>
+                        <li><span>Java</span><br>I have completed a project using Java. I have experience using databases with Java as shown in my Course Scheduler project. Java was the programming language which got me excited about programming in high school!</li>
+                        <li><span>Web Development</span><br>I have been developing websites since seventh grade. In seventh grade I developed a website with tips for students and teachers using the Chromebook laptops that were given to every student in my middle school, this website placed third in the Pennsylvania State Media and Design Competition. My most recent work includes this website using tools such as HTML, CSS, and JavaScript.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id = "experience">
+                    <ul>
+                        <li><span>2023 - 2024</span><br><b>AI Intern at 1Mby1M</b>. In this role, I learned from many startup founders about what it takes to grow a tech or AI startup. I also increased the company's reach by gaining by reveiwing the courses and publishing my reviews on LinkedIn, where I reached hundreds of unique users over my summer.</li>
+                        <li><span>2024 - Current</span><br><b>Grader for Penn State University CSE Department</b>. In this role, I graded assignments for the Penn State course CMPSC 131: Programming and Computation I: Fundamentals. I graded up to 700 student's programming projects and provided feedback on incorrect code, poor documentation, and poor programming practices.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id = "education">
+                    <ul>
+                        <li><span>2023 - expected 2027</span><br>B.S. Computer Science from The Pennsylvania State University</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------about------------>
+
+<!----------project---------->
+<div id="project">
+    <div class="container">
+        <h1 class = "sub-title">My Projects</h1>
+        <div class="project-list">
+            <div class="project">
+                <img src="images/project-1.png">
+                <div class="layer">
+                    <h3>Personal Portfolio Webpage</h3>
+                    <p>Developed a personal portfolio website using HTML, CSS, and JavaScript to showcase my skills, projects, and experiences as a Computer Science student. The website serves as a central hub for potential employers and peers to learn more about my work and accomplishments.</p>
+                    <!--<a href="jackheagele.software"><i class="fa-solid fa-up-right-from-square"></i></a>-->
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/project-2.png">
+                <div class="layer">
+                    <h3>Course Scheduler</h3>
+                    <p>Developed a course scheduler using Java and SQL. The project follows object-oriented design principles to connect a database to java to a GUI.</p>
+                    <!--<a href="https://github.com/jackheagele/coursescheduler"><i class="fa-solid fa-up-right-from-square"></i></a>-->
+                </div>
+            </div>
+        </div>
+        <!--<a href="#" class="btn">See more</a>-->
+    </div>
+</div>
+<!----------project----------->
+
+<!-----------contact------------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-envelope"></i>rjheagele@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/jack-heagele-10923a290"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="Jack_Heagele_Resume.pdf" download class = "btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="firstName" placeholder="First Name" autocomplete="given-name" required>
+                    <input type="text" name="lastName" placeholder="Last Name" autocomplete="family-name" required>
+                    <input type="email" name="email" placeholder="Email" autocomplete="off" required>
+                    <textarea name="Message" rows="6" placeholder="Type here..."></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+        <p>Last updated September 6th, 2024.</p>
+    </div>
+</div>
+<!-----------contact------------>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        //remove active link and tab
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+
+        //set new link and tab to active
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    const menu = document.querySelector('nav ul'); // Target the navigation list (menu)
+    const menuButton = document.querySelector('.fa-bars'); // Target the hamburger menu icon
+
+    // Show the menu (when the hamburger icon is clicked)
+    menuButton.addEventListener('click', () => {
+        menu.classList.add('show');
+    });
+
+    // Hide the menu when the pseudo-element (close X) is clicked
+    menu.addEventListener('click', (event) => {
+        // Check if the click was on the pseudo-element close button
+        if (event.target === menu && menu.classList.contains('show')) {
+            menu.classList.remove('show');
+        }
+    });
+
+</script>
+
+</body>
+</html>
