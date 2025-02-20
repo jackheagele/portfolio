@@ -317,6 +317,11 @@ form .btn2{
     cursor: pointer;
     align-self: center;
 }
+iframe {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
 
 /*---------contact---------*/
 
