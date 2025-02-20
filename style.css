@@ -353,6 +353,7 @@ nav .fa-solid{
     
     .header-text h1{
         font-size: 24px;
+        /*add shadow behind text*/
     }
 
     nav .fa-solid.fa-bars{
