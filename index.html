@@ -12,98 +12,115 @@
 <div id="header">
     <div class="container">
         <nav>
-            <!--<img src = "images/logo.png" class = "logo">-->
-            <ul>
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul id="sidemenu">
+                <li><a href="#header" onclick="closemenu()">Home</a></li>
+                <li><a href="#about" onclick="closemenu()">About</a></li>
+                <li><a href="#project" onclick="closemenu()">Projects</a></li>
+                <li><a href="#contact" onclick="closemenu()">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <p>Computer Science Student</p>
+            <p>AI Automation Technical Specialist &amp; CS Student</p>
             <h1><span>Jack Heagele</span></h1>
         </div>
     </div>
-</div>   
-<!-------------about------------>
+</div>
+
+<!-------------about------------->
 <div id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="https://raw.githubusercontent.com/jackheagele/portfolio/main/headshot.JPG">
+                <img src="https://raw.githubusercontent.com/jackheagele/portfolio/main/headshot.JPG" alt="Jack Heagele">
             </div>
             <div class="about-col-2">
-                <h1 class = "sub-title">About Me</h1>
-                <p>I am a second-year Computer Science student at Penn State University. I am interested in software, application, and web development. I am currently seeking Internships to continue my passion for the fast-paced world of computing! Click through the tabs below to read more!</p>
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm a Computer Science student at Penn State University (expected May 2027) with a Minor in Statistics and a Smeal College of Business Fundamentals Certificate. Currently on an IBM Co-Op as an AI Automation Technical Specialist, where I build enterprise-grade AI workflows on IBM's Maximo Application Suite. I'm passionate about the intersection of software engineering, AI, and real-world business impact.</p>
 
                 <div class="tab-titles">
-                    <p class = "tab-links active-link" onclick = "opentab('skills')">Skills</p>
-                    <p class = "tab-links" onclick = "opentab('experience')">Experience</p>
-                    <p class = "tab-links" onclick = "opentab('education')">Education</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
-                <div class="tab-contents active-tab" id = "skills">
-                    <ul>
-                        <li><span>Python</span><br>Python is the programming language I have the most programming experience with. My most practice with data structures has been done in Python. I have used libraries such as PyGame to create small games with friends in high school.</li>
-                        <li><span>Java</span><br>I have completed a project using Java. I have experience using databases with Java as shown in my Course Scheduler project. Java was the programming language which got me excited about programming in high school!</li>
-                        <li><span>C</span><br>I have completed a project using C. I have experience doing low level and systems programming in C.</li>
-                        <li><span>Web Development</span><br>I have been developing websites since seventh grade. In seventh grade I developed a website with tips for students and teachers using the Chromebook laptops that were given to every student in my middle school, this website placed third in the Pennsylvania State Media and Design Competition. My most recent work includes this website using tools such as HTML, CSS, and JavaScript.</li>
 
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Languages</span><br>Python, Java, C, C++, SQL, JavaScript (HTML/CSS)</li>
+                        <li><span>Frameworks &amp; Libraries</span><br>Angular, Electron, NumPy, Pandas, PostgreSQL, React</li>
+                        <li><span>Cloud &amp; DevOps</span><br>IBM Cloud, Docker, Kubernetes, Red Hat OpenShift, Linux, Git</li>
+                        <li><span>Other</span><br>watsonx Orchestrate SDK, REST APIs, SQLite, CI/CD</li>
                     </ul>
                 </div>
-                <div class="tab-contents" id = "experience">
+
+                <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span>June 2024 - August 2024</span><br><b>AI Intern at 1Mby1M</b>. In this role, I learned from many startup founders about what it takes to grow a tech or AI startup. I also increased the company's reach by gaining by reveiwing the courses and publishing my reviews on LinkedIn, where I reached hundreds of unique users over my summer.</li>
-                        <li><span>August 2024 - Current</span><br><b>CSE Grader at Penn State University</b>. In this role, I graded assignments for the Penn State course CMPSC 131: Programming and Computation I: Fundamentals. I graded up to 700 student's programming projects and provided feedback on incorrect code, poor documentation, and poor programming practices.</li>
-                        <li><span>June 2024 - August 2024</span><br><b>Warehouse Technician at Sherwin Williams</b>. In this role, I operated various warehouse equipment, including forklifts, industrial wrappers, and printers. I consistently exceeded order fulfillment performance expectations by an average of 34%</li>
+                        <li><span>May 2025 – Present</span><br><b>AI Automation Technical Specialist Co-Op at IBM</b>. Building enterprise AI workflows on Maximo Application Suite using Python, REST APIs, and watsonx Orchestrate. Contributed to a $100K sales opportunity and developed enablement materials supporting $1M in sales across multiple opportunities.</li>
+                        <li><span>August 2024 – May 2025</span><br><b>CSE Grader at Penn State University</b>. Graded assignments with 99%+ accuracy for 1000+ students in CMPSC 131 (Intro to Python). Collaborated with a team of 8 graders to ensure consistency and fairness across all submissions.</li>
+                        <li><span>June 2024 – August 2024</span><br><b>AI Intern at 1Mby1M</b>. Reviewed AI and startup courses, publishing LinkedIn writeups that reached hundreds of unique users. Gained exposure to AI startup growth strategies from founders across the 1Mby1M accelerator network.</li>
                     </ul>
                 </div>
-                <div class="tab-contents" id = "education">
+
+                <div class="tab-contents" id="education">
                     <ul>
-                        <li><span>2023 - expected 2027</span><br>B.S. Computer Science from The Pennsylvania State University<br>Minor in Statistics<br>Smeal College of Business Fundamentals Certificate</li>
+                        <li><span>2023 – Expected May 2027</span><br><b>B.S. Computer Science</b> — The Pennsylvania State University<br>Minor in Statistics &nbsp;|&nbsp; Smeal College of Business Fundamentals Certificate<br>GPA: 3.57 &nbsp;|&nbsp; Dean's List (5 semesters)</li>
+                        <li><span>Relevant Coursework</span><br>Data Structures &amp; Algorithms, Database Management Systems, Operating Systems, Systems Programming, Artificial Intelligence, Programming Language Concepts, Probability &amp; Statistics, Finance</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-------------about------------>
 
 <!----------project---------->
 <div id="project">
     <div class="container">
-        <h1 class = "sub-title">My Projects</h1>
+        <h1 class="sub-title">My Projects</h1>
         <div class="project-list">
             <div class="project">
-                <img src="https://raw.githubusercontent.com/jackheagele/portfolio/main/project-1.png">
+                <img src="https://raw.githubusercontent.com/jackheagele/portfolio/main/project-1.png" alt="Portfolio Website">
                 <div class="layer">
-                    <h3>Personal Portfolio Webpage</h3>
-                    <p>Developed a personal portfolio website using HTML, CSS, and JavaScript to showcase my skills, projects, and experiences as a Computer Science student. The website serves as a central hub for potential employers and peers to learn more about my work and accomplishments.</p>
+                    <h3>Personal Portfolio Website</h3>
+                    <p>Built a personal portfolio site using HTML, CSS, and JavaScript to showcase projects and experience. Features a responsive mobile layout, tabbed content sections, and smooth scroll navigation.</p>
                     <a href="https://github.com/jackheagele/portfolio"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="project">
-                <img src="https://raw.githubusercontent.com/jackheagele/portfolio/main/project-2.png">
+                <img src="https://raw.githubusercontent.com/jackheagele/portfolio/main/project-2.png" alt="NittanyAuction">
+                <div class="layer">
+                    <h3>NittanyAuction</h3>
+                    <p>Full-stack Flask/SQLite auction platform built with a team of 4. Implemented the bidder role: dashboard, product search, bidding with business rule enforcement, credit card management, payment flow, and seller rating system.</p>
+                    <a href="https://github.com/jackheagele"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="https://raw.githubusercontent.com/jackheagele/portfolio/main/project-3.png" alt="Finance Tracker">
+                <div class="layer">
+                    <h3>Personal Finance Tracker</h3>
+                    <p>Full-stack desktop finance app built with Electron, React, and SQLite. Features transaction tracking, budgeting, loan management, investment monitoring, and a local AI financial advisor powered by Ollama — 100% locally, no cloud.</p>
+                    <a href="https://github.com/jackheagele"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="https://raw.githubusercontent.com/jackheagele/portfolio/main/project-2.png" alt="Course Scheduler">
                 <div class="layer">
                     <h3>Course Scheduler</h3>
-                    <p>Developed a course scheduler using Java and SQL. The project follows object-oriented design principles to connect a database to java to a GUI.</p>
+                    <p>Java and SQL course scheduling app following object-oriented design principles, connecting a database backend to a GUI frontend for managing course enrollments.</p>
                     <a href="https://github.com/jackheagele/coursescheduler"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="project">
-                <img src="https://raw.githubusercontent.com/jackheagele/portfolio/main/project-3.png">
+                <img src="https://raw.githubusercontent.com/jackheagele/portfolio/main/project-3.png" alt="MDADM">
                 <div class="layer">
-                    <h3>MDADM Linear JBOD Implementation</h3>
-                    <p>Developed a C programming project implementing MDADM linear device functionality using JBOD (Just a Bunch of Disks). The project involved configuring disk arrays to operate as a single logical unit for data storage, showcasing my proficiency in systems programming and disk management concepts.</p>
+                    <h3>MDADM Linear JBOD</h3>
+                    <p>C programming project implementing MDADM linear device functionality using JBOD (Just a Bunch of Disks), configuring disk arrays as a single logical unit and demonstrating low-level systems programming and disk management.</p>
                     <a href="https://github.com/jackheagele/mdadm-linear-jbod-implementation.git"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
-        <!---<a href="#" class="btn">See more</a>--->
     </div>
 </div>
-<!----------project----------->
 
 <!-----------contact------------>
 <div id="contact">
@@ -113,63 +130,37 @@
                 <h1 class="sub-title">Contact Me</h1>
                 <p><i class="fa-regular fa-envelope"></i>rjheagele@gmail.com</p>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/jack-heagele-10923a290"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/jack-heagele-10923a290" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/jackheagele" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </div>
-                <a href="Jack_Heagele_Resume.pdf" download class = "btn btn2">Download Resume</a>
+                <a href="Jack_Heagele_Resume.pdf" download class="btn btn2">Download Resume</a>
             </div>
-            <!---<div class="contact-right">
-                <form>
-                    <input type="text" name="firstName" placeholder="First Name" autocomplete="given-name" required>
-                    <input type="text" name="lastName" placeholder="Last Name" autocomplete="family-name" required>
-                    <input type="email" name="email" placeholder="Email" autocomplete="off" required>
-                    <textarea name="Message" rows="6" placeholder="Type here..."></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-            </div>-->
             <div class="contact-right">
                 <iframe src="https://forms.gle/Hd8YpYqCrS3QwZ5y9" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            </div>            
+            </div>
         </div>
-        <p>Last updated Febrauary 20, 2025</p>
+        <p class="copyright">Last updated June 2025</p>
     </div>
 </div>
-<!-----------contact------------>
 
 <script>
-
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname){
-        //remove active link and tab
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-
-        //set new link and tab to active
+    function opentab(tabname) {
+        for (tablink of tablinks) tablink.classList.remove("active-link");
+        for (tabcontent of tabcontents) tabcontent.classList.remove("active-tab");
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
 
-    const menu = document.querySelector('nav ul'); // Target the navigation list (menu)
-    const menuButton = document.querySelector('.fa-bars'); // Target the hamburger menu icon
+    function openmenu() {
+        document.getElementById("sidemenu").classList.add("show");
+    }
 
-    // Show the menu (when the hamburger icon is clicked)
-    menuButton.addEventListener('click', () => {
-        menu.classList.add('show');
-    });
-
-    // Hide the menu when the pseudo-element (close X) is clicked
-    menu.addEventListener('click', (event) => {
-        // Check if the click was on the pseudo-element close button
-        if (event.target === menu && menu.classList.contains('show')) {
-            menu.classList.remove('show');
-        }
-    });
-
+    function closemenu() {
+        document.getElementById("sidemenu").classList.remove("show");
+    }
 </script>
 
 </body>
